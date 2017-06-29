@@ -1,13 +1,153 @@
 <!DOCTYPE html>
 <html>
 <title> Jeesoo's Website </title>
-<body>
-
-div {
-    width: 100%;
-    background-image: url('Background.jpg');
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted white;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    font-size: small;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 25px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {
+  background: white;
+  color:white;
+}
+footer {background: white; color: #aaa; }
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+    display: inline;
+    padding: 0;
+}
+.nav ul a {
+    text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+
+</style>
+</head>
+
+<body>
+<div class="flex-container">
+<header>
+  <h1><br><br><img src="Header.png"><br></h1>
+</h1>
+<h2><div class="tooltip"><a href="http://linkedin.com/in/jeesoo-kim"><img src="resume.png" alt="Resume" height="25" width="25"></a><span class="tooltiptext">Resume</span></div> <div class="tooltip"><a href="https://2gluttons.wordpress.com"><img src="cutlery.png" alt="Food blog" height="25" width="25"></a><span class="tooltiptext">Food Blog</span></div>    <div class="tooltip"><a href="http://linkedin.com/in/jeesoo-kim"><img src="linkedin.png" alt="LinkedIn profile" height="25" width="25"></a><span class="tooltiptext">LinkedIn</span></div>
+</header>
+
+<div class="container">
+
+  <div class="overlay">
+    <div class="text">LinkedIn</div>
+  </div>
+</div>
+<div class="container">
+
+  <div class="overlay">
+    <div class="text">Food Blog</div>
+  </div>
+</div>
+
+
+
+<footer>Copyright &copy; 2017, Jeesoo Kim</footer>
+</div>
+
+
+<div></div>
 </body>
 </html>
